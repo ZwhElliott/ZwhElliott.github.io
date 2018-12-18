@@ -333,17 +333,17 @@
       
         
           
-            <h1 id="算法分析：渐进分析（asymptotic-analyze）"><a href="#算法分析：渐进分析（asymptotic-analyze）" class="headerlink" title="算法分析：渐进分析（asymptotic analyze）"></a>算法分析：渐进分析（asymptotic analyze）</h1><h2 id="一-·-渐近分析的原因"><a href="#一-·-渐近分析的原因" class="headerlink" title="一 · 渐近分析的原因"></a>一 · 渐近分析的原因</h2><p>  　　　 1. 忽略机器原因造成的不同<br> 　　　  2.分析的是运行时间的增长而不是具体的运行时间</p>
-<h2 id="二-·-分析角度"><a href="#二-·-分析角度" class="headerlink" title="二 · 分析角度"></a>二 · 分析角度</h2><p>　　　1. 最坏情况<br>　　　2. 平均情况<br>　　　3. 最好情况</p>
-<h2 id="三-·-渐进符号"><a href="#三-·-渐进符号" class="headerlink" title="三 · 渐进符号"></a>三 · 渐进符号</h2><p>　　1. θ(g(m)) 忽略常数和低次项  例如： 9x³+90n²+5 = θ（n³）<br>　　2. Ο(g(n))  定义：存在c&gt;0，δ&gt;0，对于任意n＞δ，使得 0≤f（n）≤c·g（n）,<br>　　　例如 2n²=O(n³)<br>　　3. Ω(g(n))  定义 存在c&gt;0，δ&gt;0，对于任意n＜δ，使得 0≤f（n）≤c·g（n）<br>   　<strong>实际上，三种符号相当于三个函数集，渐近分析了g(n)函数的大体状况  </strong>  </p>
-<blockquote>
-<p> <strong>θ(g(m))相当于＝<br> Ο(g(n))相当于≤<br>Ω(g(n))相当于≥</strong></p>
-</blockquote>
-<h2 id="四-·-分析递归"><a href="#四-·-分析递归" class="headerlink" title="四 · 分析递归"></a>四 · 分析递归</h2><h3 id="1．代换法（substitution-method）"><a href="#1．代换法（substitution-method）" class="headerlink" title="　1．代换法（substitution method）"></a>　1．代换法（substitution method）</h3><p> 　　　　　<strong>类似于数学归纳法 </strong><br>　　　　　先猜出答案 再用归纳法证明<br>　　　　　例： T(n) = 4T(n/2)+n<br>  　　　　　先猜，感觉它是O(n²)　<br>　　  　　　即求证 T(n)≤c·n²  balabalabala</p>
-<h3 id="2-递归树法（recursion-tree-method）"><a href="#2-递归树法（recursion-tree-method）" class="headerlink" title="　2. 递归树法（recursion-tree method）"></a>　2. 递归树法（recursion-tree method）</h3><p>　　　　　将递归式按二叉树的形式展开统计每一层总量累加（一般为几何级数）得出结果</p>
-<h3 id="3．主方法（master-method）"><a href="#3．主方法（master-method）" class="headerlink" title="　3．主方法（master method）"></a>　3．主方法（master method）</h3><p> 　　　　　假设递归式为  <strong>T(n) = aT(n/b) + f(n)  </strong><br>　　　　　<strong>Case1：f(n)&lt; θ（n^log_b ⁡a ）,T(n)= θ（n^log_b a ）  </strong><br>　　　　　<strong>Case2:  f(n)= θ（n^log_b ⁡a ）,T(n)= θ（n^log_b⁡a ·lgn）  </strong><br>　　　　　<strong>Case3:  f(n)&gt; θ（n^log_b ⁡a ）, T(n)= θ(f(n))  </strong><br>　　　　　证明过程：　　　　　<br> 　　　　　将递归式按递归树展开，高度h =log_b⁡n，　　　　　<br> 　　　　　故宽为a^h =a^(log_b⁡ n)  =n^(log_b⁡ a) …….<br>　　　　　然后一会儿一后就证到了<del>绝对不是因为证不出</del><br>　　　　　<strong>详细证明过程可见于<a href="https://blog.csdn.net/jasonding1354/article/details/37690027" target="_blank" rel="noopener">这里</a></strong></p>
-
-          
+          算法分析：渐进分析（asymptotic analyze）一 · 渐近分析的原因  　　　 1. 忽略机器原因造成的不同 　　　  2.分析的是运行时间的增长而不是具体的运行时间
+二 · 分析角度　　　1. 最坏情况　　　2. 平均情况　　　3. 最好情况
+三 · 渐进符号　　1. θ(g(m)) 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/18/算法分析/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
